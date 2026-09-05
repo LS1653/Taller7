@@ -1,0 +1,61 @@
+# =========================
+# Unity
+# =========================
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+
+# =========================
+# IDE / Visual Studio
+# =========================
+
+.vs/
+.idea/
+.vscode/
+
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.DotSettings.user
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Unity generated
+# =========================
+
+sysinfo.txt
+
+# =========================
+# Builds
+# =========================
+
+*.apk
+*.aab
+*.exe
+*.app
+*.appx
+*.unitypackage
+
+# =========================
+# Temporary / backup files
+# =========================
+
+*.tmp
+*.temp
+*.bak
+*~
