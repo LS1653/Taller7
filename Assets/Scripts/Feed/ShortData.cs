@@ -23,4 +23,7 @@ public class ShortData : ScriptableObject
     public int falsedad;
 
     public string tematica;
+
+    [Header("Búsqueda")]
+    public SearchOption[] searchOptions;
 }
