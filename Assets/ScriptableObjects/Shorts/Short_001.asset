@@ -16,16 +16,13 @@ MonoBehaviour:
   video: {fileID: 0}
   titulo: 
   fuente: 
-  sensacionalismo: 1
-  falsedad: 1
+  sensacionalismo: 2
+  falsedad: 3
   tematica: 
   searchOptions:
   - texto: 
     tipo: 2
-    efectoFalsedad: -10
   - texto: 
     tipo: 1
-    efectoFalsedad: 0
   - texto: 
     tipo: 0
-    efectoFalsedad: 5
