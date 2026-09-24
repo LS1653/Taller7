@@ -12,9 +12,21 @@ public class GameManager : MonoBehaviour
 
     public GameState CurrentState { get; private set; }
 
+    public ShortData CurrentShort { get; private set; }
+
     private void Awake()
     {
         SetState(GameState.Tutorial);
+    }
+
+    public void SetCurrentShort(ShortData shortData)
+    {
+        CurrentShort = shortData;
+
+        if (CurrentShort != null)
+        {
+            Debug.Log("Short actual: " + CurrentShort.name);
+        }
     }
 
     public void SetState(GameState newState)
