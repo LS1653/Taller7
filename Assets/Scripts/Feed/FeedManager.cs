@@ -2,48 +2,41 @@ using UnityEngine;
 
 public class FeedManager : MonoBehaviour
 {
-    [SerializeField] private ShortData[] shorts;
-
     private GameManager gameManager;
-
-    private int currentIndex = 0;
+    private FeedSelector feedSelector;
 
     private void Awake()
     {
         gameManager = FindFirstObjectByType<GameManager>();
+        feedSelector = FindFirstObjectByType<FeedSelector>();
     }
 
     private void Start()
     {
-        if (shorts != null && shorts.Length > 0)
-        {
-            gameManager.SetCurrentShort(shorts[0]);
-        }
-    }
-
-    public ShortData GetFirstShort()
-    {
-        if (shorts != null && shorts.Length > 0)
-            return shorts[0];
-    
-        return null;
+        CargarSiguienteShort();
     }
 
     public void Next()
     {
-        if (shorts == null || shorts.Length == 0)
+        CargarSiguienteShort();
+    }
+
+    private void CargarSiguienteShort()
+    {
+        if (feedSelector == null)
+        {
+            Debug.LogError("No se encontró FeedSelector.");
             return;
-    
-        if (currentIndex >= shorts.Length - 1)
+        }
+
+        ShortData siguienteShort = feedSelector.ObtenerSiguiente();
+
+        if (siguienteShort == null)
         {
             Debug.Log("No hay más Shorts disponibles.");
             return;
         }
-    
-        currentIndex++;
-    
-        ShortData nextShort = shorts[currentIndex];
-    
-        gameManager.SetCurrentShort(nextShort);
+
+        gameManager.SetCurrentShort(siguienteShort);
     }
 }
