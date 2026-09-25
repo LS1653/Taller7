@@ -38,17 +38,32 @@ public class FeedSelector : MonoBehaviour
     {
         if (shortsDisponibles.Count == 0)
         {
-            Debug.Log("Todos los Shorts fueron utilizados.");
+            Debug.Log("Biblioteca completada. Reiniciando Shorts disponibles.");
+    
+            ReiniciarBiblioteca();
+        }
+    
+        List<ShortData> candidatos =
+            BuscarCandidatosSegunDooming();
+    
+        if (candidatos.Count == 0)
+        {
+            Debug.Log("No se encontraron candidatos.");
             return null;
         }
-
-        int indice = Random.Range(0, shortsDisponibles.Count);
-
-        ShortData seleccionado = shortsDisponibles[indice];
-
-        shortsDisponibles.RemoveAt(indice);
+    
+        int indice = Random.Range(0, candidatos.Count);
+    
+        ShortData seleccionado = candidatos[indice];
+    
+        shortsDisponibles.Remove(seleccionado);
         shortsUtilizados.Add(seleccionado);
-
+    
+        Debug.Log(
+            $"Short seleccionado: {seleccionado.name} " +
+            $"(S{seleccionado.sensacionalismo}/F{seleccionado.falsedad})"
+        );
+    
         return seleccionado;
     }
 

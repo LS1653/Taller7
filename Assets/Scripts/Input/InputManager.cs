@@ -78,6 +78,17 @@ public class InputManager : MonoBehaviour
 
     private void OnSwipeUp()
     {
+        GameManager gameManager =
+            FindFirstObjectByType<GameManager>();
+    
+        if (gameManager == null)
+            return;
+    
+        if (gameManager.CurrentState == GameManager.GameState.Tutorial)
+        {
+            gameManager.IniciarJuego();
+        }
+    
         feedManager.Next();
     }
 }

@@ -9,13 +9,31 @@ public class DoomingManager : MonoBehaviour
     [Header("Progresión automática")]
     [SerializeField] private float aumentoPorSegundo = 0.30f;
 
+    private GameManager gameManager;
+
     public float Sensacionalismo => sensacionalismo;
-    public float Falsedad => falsedad;   
+    public float Falsedad => falsedad;  
+
+    private void Awake()
+    {
+        gameManager = FindFirstObjectByType<GameManager>();
+    } 
 
     private void Update()
     {
+        if (gameManager == null)
+            return;
+    
+        if (gameManager.CurrentState != GameManager.GameState.Playing)
+            return;
+    
         sensacionalismo += aumentoPorSegundo * Time.deltaTime;
         falsedad += aumentoPorSegundo * Time.deltaTime;
+    
+        if (HayDoomingCritico())
+        {
+            gameManager.FinalizarPorCritico();
+        }
     }
 
     public void ModificarSensacionalismo(float cantidad)
@@ -46,5 +64,10 @@ public class DoomingManager : MonoBehaviour
             return 3;
     
         return 4;
+    }
+
+    public bool HayDoomingCritico()
+    {
+        return sensacionalismo > 90f || falsedad > 90f;
     }
 }

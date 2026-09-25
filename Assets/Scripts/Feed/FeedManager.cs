@@ -5,10 +5,18 @@ public class FeedManager : MonoBehaviour
     private GameManager gameManager;
     private FeedSelector feedSelector;
 
+    private ShortView shortView;
+    private ShortInteraction shortInteraction;
+    private DoomingManager doomingManager;
+
     private void Awake()
     {
         gameManager = FindFirstObjectByType<GameManager>();
         feedSelector = FindFirstObjectByType<FeedSelector>();
+        shortView = FindFirstObjectByType<ShortView>();
+
+        shortInteraction = FindFirstObjectByType<ShortInteraction>();
+        doomingManager = FindFirstObjectByType<DoomingManager>();
     }
 
     private void Start()
@@ -38,5 +46,32 @@ public class FeedManager : MonoBehaviour
         }
 
         gameManager.SetCurrentShort(siguienteShort);
+
+        if (shortInteraction != null && doomingManager != null)
+        {
+            bool esTutorial =
+                gameManager.CurrentState == GameManager.GameState.Tutorial;
+        
+            shortInteraction.Initialize(
+                siguienteShort,
+                esTutorial,
+                doomingManager
+            );
+        }
+        else
+        {
+            Debug.LogError(
+                "No se encontró ShortInteraction o DoomingManager."
+            );
+        }
+
+        if (shortView != null)
+        {
+            shortView.MostrarShort(siguienteShort);
+        }
+        else
+        {
+            Debug.LogError("No se encontró ShortView.");
+        }
     }
 }

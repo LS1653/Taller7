@@ -27,6 +27,11 @@ public class ShortInteraction : MonoBehaviour
         liked = false;
         reported = false;
         searched = false;
+
+        Debug.Log(
+        $"ShortInteraction inicializado → {shortData.name}, " +
+        $"Tutorial: {isTutorial}"
+        );
     }
 
     public void Like()
