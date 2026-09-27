@@ -11,6 +11,8 @@ public class ShortInteraction : MonoBehaviour
     private ShortData shortData;
     private DoomingManager doomingManager;
 
+    [SerializeField] private GameObject reportConfirmation;
+
     public bool Liked => liked;
     public bool Reported => reported;
     public bool Searched => searched;
@@ -27,6 +29,11 @@ public class ShortInteraction : MonoBehaviour
         liked = false;
         reported = false;
         searched = false;
+
+        if (reportConfirmation != null)
+        {
+            reportConfirmation.SetActive(false);
+        }
 
         Debug.Log(
         $"ShortInteraction inicializado → {shortData.name}, " +
@@ -66,6 +73,21 @@ public class ShortInteraction : MonoBehaviour
             return;
 
         Debug.Log("Report solicitado. Esperando confirmación.");
+
+        if (reportConfirmation != null)
+        {
+            reportConfirmation.SetActive(true);
+        }
+    }
+
+    public void CancelarReport()
+    {
+        if (reportConfirmation != null)
+        {
+            reportConfirmation.SetActive(false);
+        }
+    
+        Debug.Log("Reporte cancelado.");
     }
 
     public void ConfirmarReport(bool reporteCorrecto)
@@ -74,6 +96,11 @@ public class ShortInteraction : MonoBehaviour
             return;
 
         reported = true;
+
+        if (reportConfirmation != null)
+        {
+            reportConfirmation.SetActive(false);
+        }
 
         if (isTutorial)
         {
@@ -90,6 +117,11 @@ public class ShortInteraction : MonoBehaviour
         Debug.Log(
             $"Report confirmado → S: {cambioS}"
         );
+    }
+
+    public void ConfirmarReportCorrecto()
+    {
+        ConfirmarReport(true);
     }
 
     public void Search(int indiceOpcion)
