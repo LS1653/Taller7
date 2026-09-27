@@ -26,6 +26,11 @@ public class FeedManager : MonoBehaviour
 
     public void Next()
     {
+        if (shortInteraction != null)
+        {
+            shortInteraction.ProcesarScroll();
+        }
+    
         CargarSiguienteShort();
     }
 

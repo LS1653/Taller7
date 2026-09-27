@@ -20,9 +20,9 @@ MonoBehaviour:
   falsedad: 3
   tematica: 
   searchOptions:
-  - texto: 
-    tipo: 2
-  - texto: 
-    tipo: 1
-  - texto: 
+  - texto: "Buscar informaci\xF3n no oficial\n"
     tipo: 0
+  - texto: Buscar otras fuentes
+    tipo: 1
+  - texto: Buscar una fuente positiva
+    tipo: 2
