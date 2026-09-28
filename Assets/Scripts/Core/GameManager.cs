@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
 
     public ShortData CurrentShort { get; private set; }
 
+    [SerializeField] private ResultUI resultUI;
+
+    [SerializeField] private ShortView shortView;
+
     [Header("Duración de la partida")]
     [SerializeField] private float duracionPartida = 180f;
     
@@ -69,7 +73,12 @@ public class GameManager : MonoBehaviour
 
     public void IniciarJuego()
     {
+        tiempoTranscurrido = 0f;
+        CurrentResult = ResultType.Ninguno;
+    
         SetState(GameState.Playing);
+    
+        Debug.Log("Partida iniciada.");
     }
 
     private void FinalizarPorTiempo()
@@ -94,6 +103,16 @@ public class GameManager : MonoBehaviour
         }
     
         SetState(GameState.Result);
+
+        if (shortView != null)
+        {
+            shortView.DetenerVideo();
+        }
+
+        if (resultUI != null)
+        {
+            resultUI.MostrarResultado(CurrentResult);
+        }
     
         Debug.Log(
             $"Partida terminada por tiempo → Resultado: {CurrentResult}"
@@ -105,6 +124,16 @@ public class GameManager : MonoBehaviour
         CurrentResult = ResultType.Critico;
     
         SetState(GameState.Doom);
+
+        if (shortView != null)
+        {
+            shortView.DetenerVideo();
+        }
+
+        if (resultUI != null)
+        {
+            resultUI.MostrarDoom();
+        }
     
         Debug.Log(
             $"Partida terminada por estado crítico → Resultado: {CurrentResult}"

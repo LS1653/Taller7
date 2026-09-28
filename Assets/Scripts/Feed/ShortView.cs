@@ -121,4 +121,14 @@ public class ShortView : MonoBehaviour
             });
         }
     }
+
+    public void DetenerVideo()
+    {
+        if (videoPlayer == null)
+            return;
+    
+        videoPlayer.Stop();
+    
+        Debug.Log("Video detenido porque la partida terminó.");
+    }
 }
