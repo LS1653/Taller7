@@ -11,10 +11,13 @@ public class InputManager : MonoBehaviour
 
     private FeedManager feedManager;
 
+    private IdleManager idleManager;
+
     private void Awake()
     {
         feedManager = FindFirstObjectByType<FeedManager>();
-
+        idleManager = FindFirstObjectByType<IdleManager>();
+    
         SwipeUp += OnSwipeUp;
     }
 
@@ -83,6 +86,9 @@ public class InputManager : MonoBehaviour
     
         if (gameManager == null)
             return;
+
+        if (idleManager != null)
+            idleManager.RegistrarInteraccion();
     
         if (gameManager.CurrentState == GameManager.GameState.Tutorial)
         {

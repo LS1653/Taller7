@@ -17,7 +17,7 @@ public class FeedSelector : MonoBehaviour
         ReiniciarBiblioteca();
     }
 
-    private void ReiniciarBiblioteca()
+    public void ReiniciarBiblioteca()
     {
         shortsDisponibles.Clear();
         shortsUtilizados.Clear();

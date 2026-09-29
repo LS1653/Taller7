@@ -19,6 +19,7 @@ public class ShortInteraction : MonoBehaviour
 
     private ShortData shortData;
     private DoomingManager doomingManager;
+    private IdleManager idleManager;
 
     [SerializeField] private GameObject reportConfirmation;
 
@@ -30,6 +31,11 @@ public class ShortInteraction : MonoBehaviour
 
     public bool Liked => liked;
     public bool Reported => reported;
+
+    private void Awake()
+    {       
+        idleManager = FindFirstObjectByType<IdleManager>();
+    }
 
     public void Initialize(
         ShortData data,
@@ -70,6 +76,9 @@ public class ShortInteraction : MonoBehaviour
     {
         if (shortData == null || doomingManager == null)
             return;
+
+        if (idleManager != null)
+            idleManager.RegistrarInteraccion();
 
         // Quitar Like
         if (liked)
@@ -134,6 +143,9 @@ public class ShortInteraction : MonoBehaviour
         if (reported)
             return;
 
+        if (idleManager != null)
+            idleManager.RegistrarInteraccion();
+
         Debug.Log("Report solicitado. Esperando confirmación.");
 
         if (reportConfirmation != null)
@@ -144,6 +156,9 @@ public class ShortInteraction : MonoBehaviour
 
     public void CancelarReport()
     {
+        if (idleManager != null)
+            idleManager.RegistrarInteraccion();
+
         if (reportConfirmation != null)
         {
             reportConfirmation.SetActive(false);
@@ -156,14 +171,17 @@ public class ShortInteraction : MonoBehaviour
     {
         if (reported)
             return;
-
+    
+        if (idleManager != null)
+            idleManager.RegistrarInteraccion();
+    
         reported = true;
-
+    
         if (reportConfirmation != null)
         {
             reportConfirmation.SetActive(false);
         }
-
+    
         if (isTutorial)
         {
             Debug.Log(
@@ -171,11 +189,11 @@ public class ShortInteraction : MonoBehaviour
             );
             return;
         }
-
+    
         int cambioS = ObtenerCambioReport(reporteCorrecto);
-
+    
         doomingManager.ModificarSensacionalismo(cambioS);
-
+    
         Debug.Log(
             $"Report confirmado → S: {cambioS}"
         );
@@ -201,6 +219,9 @@ public class ShortInteraction : MonoBehaviour
         if (indiceOpcion < 0 ||
             indiceOpcion >= shortData.searchOptions.Length)
             return;
+
+        if (idleManager != null)
+            idleManager.RegistrarInteraccion();
 
         SearchOption opcion = shortData.searchOptions[indiceOpcion];
 

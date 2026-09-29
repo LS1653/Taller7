@@ -71,4 +71,9 @@ public class ResultUI : MonoBehaviour
         if (doomPanel != null)
             doomPanel.SetActive(false);
     }
+
+    public void OcultarResultados()
+    {
+        OcultarTodo();
+    }
 }

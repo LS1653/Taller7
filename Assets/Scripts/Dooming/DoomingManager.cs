@@ -100,4 +100,12 @@ public class DoomingManager : MonoBehaviour
         return sensacionalismo > 90f ||
                falsedad > 90f;
     }
+
+    public void ReiniciarDooming()
+    {
+        sensacionalismo = 1f;
+        falsedad = 1f;
+    
+        Debug.Log("Dooming reiniciado → S1/F1.");
+    }
 }

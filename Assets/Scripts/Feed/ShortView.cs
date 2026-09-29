@@ -51,6 +51,7 @@ public class ShortView : MonoBehaviour
         videoPlayer.Stop();
 
         videoPlayer.clip = shortData.video;
+        videoPlayer.isLooping = true;
         videoPlayer.Play();
 
         ConfigurarBusqueda(shortData);

@@ -139,4 +139,34 @@ public class GameManager : MonoBehaviour
             $"Partida terminada por estado crítico → Resultado: {CurrentResult}"
         );
     }
+
+    public void ReiniciarPorInactividad()
+    {
+        tiempoTranscurrido = 0f;
+        CurrentResult = ResultType.Ninguno;
+    
+        if (shortView != null)
+            shortView.DetenerVideo();
+    
+        if (resultUI != null)
+            resultUI.OcultarResultados();
+    
+        DoomingManager doomingManager =
+            FindFirstObjectByType<DoomingManager>();
+    
+        if (doomingManager != null)
+            doomingManager.ReiniciarDooming();
+    
+        SetState(GameState.Tutorial);
+    
+        FeedManager feedManager =
+            FindFirstObjectByType<FeedManager>();
+    
+        if (feedManager != null)
+            feedManager.ReiniciarFeed();
+    
+        Debug.Log(
+            "Partida reiniciada por inactividad → Tutorial."
+        );
+    }
 }

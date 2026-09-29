@@ -1385,10 +1385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1371e5433b0603448bdeb89dce09de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shorts:
-  - {fileID: 11400000, guid: 622b9c7d45aa9c04e8ebd440148761ae, type: 2}
-  - {fileID: 11400000, guid: 9577fe7d422da5d4cbe050fdea3ca818, type: 2}
-  - {fileID: 11400000, guid: ad07610290692204f8590f6558d0cf8b, type: 2}
+  shorts: []
 --- !u!1 &578627115
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,6 +2956,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reportConfirmation: {fileID: 1002058918}
+--- !u!1 &1264699287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1264699288}
+  - component: {fileID: 1264699289}
+  m_Layer: 0
+  m_Name: IdelManger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1264699288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264699287}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -330.6051, y: 111.28772, z: 2.0736988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1460070104}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264699289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264699287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a1aa90304c51b240a0bb653c2f32d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiempoInactividad: 30
 --- !u!1 &1350839527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3281,6 +3323,7 @@ Transform:
   - {fileID: 1705065087}
   - {fileID: 1974831525}
   - {fileID: 551078242}
+  - {fileID: 1264699288}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1500579872
@@ -3405,6 +3448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811b742ecc36b0c429f4feb3cf0998c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialShort: {fileID: 11400000, guid: 44da4fecfeeffc14b89a2200962a646f, type: 2}
 --- !u!1 &1567978118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,7 +3631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resultUI: {fileID: 1350839532}
   shortView: {fileID: 993003997}
-  duracionPartida: 10
+  duracionPartida: 180
 --- !u!1 &1847624022
 GameObject:
   m_ObjectHideFlags: 0
