@@ -18,7 +18,7 @@ MonoBehaviour:
   fuente: 
   sensacionalismo: 1
   falsedad: 1
-  tematica: tutorial
+  tematica: Tutorial
   searchOptions:
   - texto: Positiva
     tipo: 2

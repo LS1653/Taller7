@@ -20,6 +20,7 @@ public class ShortInteraction : MonoBehaviour
     private ShortData shortData;
     private DoomingManager doomingManager;
     private IdleManager idleManager;
+    private GameManager gameManager;
 
     [SerializeField] private GameObject reportConfirmation;
 
@@ -35,6 +36,7 @@ public class ShortInteraction : MonoBehaviour
     private void Awake()
     {       
         idleManager = FindFirstObjectByType<IdleManager>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     public void Initialize(
@@ -68,12 +70,24 @@ public class ShortInteraction : MonoBehaviour
         );
     }
 
+    private bool PuedeInteractuar()
+    {
+        if (gameManager == null)
+            return false;
+    
+        return gameManager.CurrentState == GameManager.GameState.Tutorial ||
+               gameManager.CurrentState == GameManager.GameState.Playing;
+    }
+
     // =========================================================
     // LIKE
     // =========================================================
 
     public void Like()
     {
+        if (!PuedeInteractuar())
+           return;
+
         if (shortData == null || doomingManager == null)
             return;
 
@@ -140,6 +154,9 @@ public class ShortInteraction : MonoBehaviour
 
     public void Report()
     {
+        if (!PuedeInteractuar())
+           return;
+
         if (reported)
             return;
 
@@ -155,7 +172,7 @@ public class ShortInteraction : MonoBehaviour
     }
 
     public void CancelarReport()
-    {
+    {      
         if (idleManager != null)
             idleManager.RegistrarInteraccion();
 
@@ -169,6 +186,9 @@ public class ShortInteraction : MonoBehaviour
 
     public void ConfirmarReport(bool reporteCorrecto)
     {
+        if (!PuedeInteractuar())
+           return;
+
         if (reported)
             return;
     
@@ -210,6 +230,9 @@ public class ShortInteraction : MonoBehaviour
 
     public void Search(int indiceOpcion)
     {
+        if (!PuedeInteractuar())
+           return;
+
         if (shortData == null || doomingManager == null)
             return;
 
@@ -337,6 +360,9 @@ public class ShortInteraction : MonoBehaviour
 
     public void ProcesarScroll()
     {
+        if (!PuedeInteractuar())
+           return;
+
         if (isTutorial)
         {
             Debug.Log("Scroll del tutorial. No modifica Dooming.");

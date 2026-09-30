@@ -81,12 +81,18 @@ public class InputManager : MonoBehaviour
 
     private void OnSwipeUp()
     {
-        GameManager gameManager =
-            FindFirstObjectByType<GameManager>();
+        GameManager gameManager = FindFirstObjectByType<GameManager>();
     
         if (gameManager == null)
             return;
-
+    
+        // Solo se puede hacer swipe durante Tutorial o Playing
+        if (gameManager.CurrentState != GameManager.GameState.Tutorial &&
+            gameManager.CurrentState != GameManager.GameState.Playing)
+        {
+            return;
+        }
+    
         if (idleManager != null)
             idleManager.RegistrarInteraccion();
     
@@ -95,6 +101,9 @@ public class InputManager : MonoBehaviour
             gameManager.IniciarJuego();
         }
     
-        feedManager.Next();
+        if (feedManager != null)
+        {
+            feedManager.Next();
+        }
     }
 }

@@ -14,6 +14,11 @@ public class ShortView : MonoBehaviour
     [SerializeField] private GameObject searchPanel;
     [SerializeField] private Button[] searchButtons;
 
+    [Header("Información del Short")]
+    [SerializeField] private TMP_Text tematicaText;
+    [SerializeField] private TMP_Text tituloText;
+    [SerializeField] private TMP_Text fuenteText;
+
     private void Awake()
     {
         videoPlayer = GetComponent<VideoPlayer>();
@@ -36,6 +41,12 @@ public class ShortView : MonoBehaviour
             Debug.LogWarning("ShortView recibió un ShortData vacío.");
             return;
         }
+
+        if (tematicaText != null)
+            tematicaText.text = shortData.tematica;
+        
+        if (tituloText != null)
+            tituloText.text = shortData.titulo;
 
         if (videoPlayer == null)
             return;
