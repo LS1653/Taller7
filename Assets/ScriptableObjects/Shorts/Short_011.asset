@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ae84c5ea34f4040b5d550907ab5c56, type: 3}
   m_Name: Short_011
   m_EditorClassIdentifier: 
-  id: 
+  id: short_011
   video: {fileID: 32900000, guid: 5151f2ebfc6a8d74fa1011ee811ed0d8, type: 3}
-  titulo: 
+  titulo: "Evac\xFAan un hospital de Medell\xEDn por una fuga de gas t\xF3xico"
   fuente: 
   sensacionalismo: 1
-  falsedad: 2
-  tematica: 
+  falsedad: 1
+  tematica: "Emergencia qu\xEDmica en cl\xEDnica"
   searchOptions:
   - texto: 
     tipo: 2

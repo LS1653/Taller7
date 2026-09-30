@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ae84c5ea34f4040b5d550907ab5c56, type: 3}
   m_Name: Short_020
   m_EditorClassIdentifier: 
-  id: 
+  id: short_020
   video: {fileID: 32900000, guid: 5151f2ebfc6a8d74fa1011ee811ed0d8, type: 3}
-  titulo: 
+  titulo: "\xA1El calor est\xE1 matando a Medell\xEDn! Podr\xEDamos quedarnos sin
+    plantas"
   fuente: 
-  sensacionalismo: 1
-  falsedad: 2
-  tematica: 
+  sensacionalismo: 2
+  falsedad: 3
+  tematica: "Vegetaci\xF3n y sequ\xEDa bajo el Metro de Medell\xEDn"
   searchOptions:
   - texto: 
     tipo: 2
