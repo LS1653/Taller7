@@ -76,4 +76,21 @@ public class ResultUI : MonoBehaviour
     {
         OcultarTodo();
     }
+
+    public void MostrarFinalNoScrollear()
+    {
+        OcultarTodo();
+    
+        if (resultPanel == null)
+            return;
+    
+        resultPanel.SetActive(true);
+    
+        resultTitle.text =
+            "ERES DE LAS POCAS PERSONAS";
+    
+        resultDescription.text =
+            "No te interesa scrollear. " +
+            "Decidiste quedarte sin interactuar con el feed.";
+    }
 }

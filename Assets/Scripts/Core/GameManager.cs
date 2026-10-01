@@ -140,6 +140,23 @@ public class GameManager : MonoBehaviour
         );
     }
 
+    public void FinalizarPorNoScrollear()
+    {
+        CurrentResult = ResultType.Neutral;
+    
+        SetState(GameState.Result);
+    
+        if (shortView != null)
+            shortView.DetenerVideo();
+    
+        if (resultUI != null)
+            resultUI.MostrarFinalNoScrollear();
+    
+        Debug.Log(
+            "Partida terminada por decisión del jugador de no scrollear."
+        );
+    }
+
     public void ReiniciarPorInactividad()
     {
         tiempoTranscurrido = 0f;
