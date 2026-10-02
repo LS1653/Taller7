@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 1
   tematica: Falsas ofertas de empleo y secuestro
   searchOptions:
-  - texto: 
+  - texto: "\xBFC\xF3mo identificar una oferta de empleo falsa antes de aceptar una
+      entrevista?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFQu\xE9 se\xF1ales suelen tener las falsas ofertas de empleo en internet?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFQu\xE9 ofertas de empleo usan los delincuentes para secuestrar personas?"
     tipo: 0

@@ -20,9 +20,11 @@ MonoBehaviour:
   falsedad: 2
   tematica: "Cierre de colegios en Medell\xEDn"
   searchOptions:
-  - texto: 
+  - texto: "\xBFQu\xE9 dicen las cifras oficiales sobre el cierre de colegios en
+      Medell\xEDn?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFCu\xE1les son las principales causas del cierre de colegios?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFQu\xE9 colegios de Medell\xEDn ya est\xE1n quebrando por falta de
+      estudiantes?"
     tipo: 0

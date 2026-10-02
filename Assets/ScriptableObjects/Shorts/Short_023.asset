@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 1
   tematica: Turismo Comuna 13
   searchOptions:
-  - texto: 
+  - texto: "\xBFQu\xE9 impacto ha tenido realmente el turismo en la Comuna 13?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo ha crecido el turismo en la Comuna 13 de Medell\xEDn?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFPor qu\xE9 los turistas est\xE1n acabando con la cultura de la Comuna
+      13?"
     tipo: 0

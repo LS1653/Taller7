@@ -20,9 +20,11 @@ MonoBehaviour:
   falsedad: 3
   tematica: Brote de dengue en Colombia
   searchOptions:
-  - texto: 
+  - texto: "\xBFEs cierto que el brote de dengue est\xE1 causando miles de muertes
+      en Colombia?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo prevenir las picaduras del mosquito que transmite el dengue?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFC\xF3mo saber si una simple picadura de mosquito significa que voy
+      a morir de dengue?"
     tipo: 0

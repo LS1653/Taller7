@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 1
   tematica: Tiendas de barrio
   searchOptions:
-  - texto: 
+  - texto: "\xBFQu\xE9 dicen las cifras sobre las ventas de las tiendas de barrio
+      en Colombia?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFCu\xE1les son los principales problemas de las tiendas de barrio?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFPor qu\xE9 nadie est\xE1 comprando en las tiendas de barrio?"
     tipo: 0

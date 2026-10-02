@@ -20,9 +20,9 @@ MonoBehaviour:
   falsedad: 1
   tematica: "Emergencia qu\xEDmica en cl\xEDnica"
   searchOptions:
-  - texto: 
-    tipo: 2
-  - texto: 
-    tipo: 1
-  - texto: 
+  - texto: "\xBFQu\xE9 gases t\xF3xicos pueden matar a personas dentro de una cl\xEDnica?"
     tipo: 0
+  - texto: "\xBFQu\xE9 hacer ante una posible fuga de gas en un hospital?"
+    tipo: 1
+  - texto: "\xBFQu\xE9 sustancia provoc\xF3 la evacuaci\xF3n de la cl\xEDnica?"
+    tipo: 2

@@ -21,9 +21,9 @@ MonoBehaviour:
   falsedad: 2
   tematica: "Riesgo sanitario en restaurante de Itag\xFC\xED"
   searchOptions:
-  - texto: 
+  - texto: "\xBFSe confirm\xF3 que el restaurante ten\xEDa alimentos contaminados?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo se detecta la contaminaci\xF3n de alimentos en un restaurante?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1ntas personas terminaron intoxicadas por el restaurante contaminado?"
     tipo: 0

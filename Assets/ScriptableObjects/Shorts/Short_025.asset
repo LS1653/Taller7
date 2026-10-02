@@ -20,9 +20,11 @@ MonoBehaviour:
   falsedad: 3
   tematica: Turismo Comuna 13
   searchOptions:
-  - texto: 
+  - texto: "\xBFQu\xE9 dicen los habitantes de la Comuna 13 sobre los efectos del
+      turismo?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFQu\xE9 elementos culturales de la Comuna 13 atraen a los turistas?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFLos turistas extranjeros est\xE1n apropi\xE1ndose de los recursos
+      de la Comuna 13?"
     tipo: 0

@@ -20,9 +20,11 @@ MonoBehaviour:
   falsedad: 3
   tematica: Tiendas de barrio
   searchOptions:
-  - texto: 
+  - texto: "\xBFLas grandes cadenas realmente est\xE1n provocando el cierre de tiendas
+      de barrio?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo compiten las tiendas de barrio con las grandes cadenas comerciales?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFC\xF3mo est\xE1n destruyendo las grandes cadenas los peque\xF1os
+      negocios de Colombia?"
     tipo: 0

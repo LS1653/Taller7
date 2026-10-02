@@ -20,9 +20,9 @@ MonoBehaviour:
   falsedad: 2
   tematica: "Desempleo en Medell\xEDn"
   searchOptions:
-  - texto: 
+  - texto: "\xBFDe d\xF3nde sale la cifra de 6.000 empleos perdidos en Medell\xEDn?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFQu\xE9 sectores generan m\xE1s empleo actualmente en Medell\xEDn?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1ntos empleos va a perder Medell\xEDn por la crisis laboral?"
     tipo: 0

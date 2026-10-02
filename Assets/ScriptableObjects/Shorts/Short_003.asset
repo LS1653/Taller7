@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 3
   tematica: "Cierre de colegios en Medell\xEDn"
   searchOptions:
-  - texto: 
+  - texto: "\xBFHay datos que confirmen que Medell\xEDn se est\xE1 quedando sin ni\xF1os?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo ha evolucionado la poblaci\xF3n infantil de Medell\xEDn en
+      los \xFAltimos a\xF1os?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1ndo se quedar\xE1 Medell\xEDn completamente sin ni\xF1os?"
     tipo: 0

@@ -20,9 +20,11 @@ MonoBehaviour:
   falsedad: 1
   tematica: Turismo Comuna 13
   searchOptions:
-  - texto: 
+  - texto: "\xBFExisten datos que relacionen el aumento del turismo con problemas
+      de seguridad en la Comuna 13?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFQu\xE9 cambios ha producido el turismo en la seguridad de la Comuna
+      13?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFQu\xE9 delitos est\xE1n cometiendo los turistas en la Comuna 13?"
     tipo: 0

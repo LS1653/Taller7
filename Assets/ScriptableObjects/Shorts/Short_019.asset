@@ -20,9 +20,11 @@ MonoBehaviour:
   falsedad: 1
   tematica: "Vegetaci\xF3n y sequ\xEDa bajo el Metro de Medell\xEDn"
   searchOptions:
-  - texto: 
+  - texto: "\xBFEl Metro de Medell\xEDn instal\xF3 realmente sistemas de riego para
+      las plantas?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo se pueden proteger las plantas durante una sequ\xEDa urbana?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1nto dinero est\xE1 gastando Medell\xEDn en regar las plantas
+      del Metro?"
     tipo: 0

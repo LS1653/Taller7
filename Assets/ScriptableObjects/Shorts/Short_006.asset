@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 3
   tematica: "Desempleo en Medell\xEDn"
   searchOptions:
-  - texto: 
+  - texto: "\xBFLas cifras oficiales confirman una p\xE9rdida masiva de empleos en
+      Medell\xEDn?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo ha variado el desempleo en Medell\xEDn recientemente?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFEs verdad que en Medell\xEDn ya no hay trabajo para nadie?"
     tipo: 0

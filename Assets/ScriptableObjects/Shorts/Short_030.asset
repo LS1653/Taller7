@@ -21,9 +21,11 @@ MonoBehaviour:
   falsedad: 1
   tematica: "Veh\xEDculos el\xE9ctricos"
   searchOptions:
-  - texto: 
+  - texto: "\xBFRealmente est\xE1 aumentando el n\xFAmero de conductores que cambian
+      de gasolina a veh\xEDculos el\xE9ctricos?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFCu\xE1les son las ventajas y desventajas de cambiar un carro de gasolina
+      por uno el\xE9ctrico?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1ndo van a desaparecer los carros de gasolina de Medell\xEDn?"
     tipo: 0

@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 2
   tematica: Globo de mecha en el aeropuerto
   searchOptions:
-  - texto: 
+  - texto: "\xBFQu\xE9 dijeron las autoridades sobre el incidente del globo en el
+      aeropuerto?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo reaccionan los aviones ante objetos en la pista?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFQu\xE9 tan cerca estuvo el avi\xF3n de estrellarse por el globo?"
     tipo: 0

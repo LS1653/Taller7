@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 1
   tematica: Brote de dengue en Antioquia
   searchOptions:
-  - texto: 
+  - texto: "\xBFQu\xE9 dicen las autoridades de salud sobre los casos de dengue en
+      Antioquia?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFCu\xE1les son los s\xEDntomas m\xE1s comunes del dengue?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1ntas personas est\xE1n muriendo por el brote de dengue en Antioquia?"
     tipo: 0

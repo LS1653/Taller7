@@ -20,9 +20,11 @@ MonoBehaviour:
   falsedad: 3
   tematica: Globo de mecha en el aeropuerto
   searchOptions:
-  - texto: 
+  - texto: "\xBFExisten pruebas de que hubo una explosi\xF3n en el aeropuerto Olaya
+      Herrera?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFQu\xE9 protocolos existen cuando ocurre una emergencia en un aeropuerto?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1ntos vuelos estuvieron a punto de explotar por el incendio
+      del aeropuerto?"
     tipo: 0

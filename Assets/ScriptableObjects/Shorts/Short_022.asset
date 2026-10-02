@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 2
   tematica: Lluvia artificial
   searchOptions:
-  - texto: 
+  - texto: "\xBFHay evidencia de una sequ\xEDa que est\xE9 afectando las plantas
+      cerca del Metro de Medell\xEDn?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFQu\xE9 efectos tiene el calor sobre la vegetaci\xF3n urbana?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFSe est\xE1n muriendo todas las plantas de Medell\xEDn por el calor?"
     tipo: 0

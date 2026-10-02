@@ -20,9 +20,11 @@ MonoBehaviour:
   falsedad: 1
   tematica: "Veh\xEDculos el\xE9ctricos"
   searchOptions:
-  - texto: 
+  - texto: "\xBFQu\xE9 dicen las cifras sobre el crecimiento de los veh\xEDculos
+      el\xE9ctricos en el Valle de Aburr\xE1?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo funcionan los veh\xEDculos el\xE9ctricos y c\xF3mo se cargan?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFPor qu\xE9 todos los conductores de Medell\xEDn est\xE1n cambi\xE1ndose
+      a veh\xEDculos el\xE9ctricos?"
     tipo: 0

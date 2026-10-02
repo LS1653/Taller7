@@ -24,6 +24,14 @@ public class ShortInteraction : MonoBehaviour
 
     [SerializeField] private GameObject reportConfirmation;
 
+    [SerializeField] private UnityEngine.UI.Image likeIcon;
+    [SerializeField] private Sprite likeVacio;
+    [SerializeField] private Sprite likeLleno;
+    
+    [SerializeField] private UnityEngine.UI.Image reportIcon;
+    [SerializeField] private Sprite reportVacio;
+    [SerializeField] private Sprite reportLleno;
+
     // Guardamos cuánto efecto produjo realmente el Like.
     // Esto permite revertirlo correctamente incluso
     // si el valor estaba cerca del mínimo.
@@ -50,7 +58,10 @@ public class ShortInteraction : MonoBehaviour
         doomingManager = manager;
 
         liked = false;
+        ActualizarIconos();
         reported = false;
+
+        ActualizarIconos();
 
         busquedaNegativaUsada = false;
         busquedaNeutralUsada = false;
@@ -68,6 +79,19 @@ public class ShortInteraction : MonoBehaviour
             $"ShortInteraction inicializado → {shortData.name}, " +
             $"Tutorial: {isTutorial}"
         );
+    }
+
+    private void ActualizarIconos()
+    {
+        if (likeIcon != null)
+        {
+            likeIcon.sprite = liked ? likeLleno : likeVacio;
+        }
+    
+        if (reportIcon != null)
+        {
+            reportIcon.sprite = reported ? reportLleno : reportVacio;
+        }
     }
 
     private bool PuedeInteractuar()
@@ -98,6 +122,7 @@ public class ShortInteraction : MonoBehaviour
         if (liked)
         {
             liked = false;
+            ActualizarIconos();
 
             if (isTutorial)
             {
@@ -125,6 +150,7 @@ public class ShortInteraction : MonoBehaviour
 
         // Dar Like
         liked = true;
+        ActualizarIconos();
 
         if (isTutorial)
         {
@@ -196,6 +222,7 @@ public class ShortInteraction : MonoBehaviour
             idleManager.RegistrarInteraccion();
     
         reported = true;
+        ActualizarIconos();
     
         if (reportConfirmation != null)
         {

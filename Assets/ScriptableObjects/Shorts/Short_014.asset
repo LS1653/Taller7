@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 3
   tematica: "Incendio en Itag\xFC\xED"
   searchOptions:
-  - texto: 
+  - texto: "\xBFCu\xE1ntas v\xEDctimas dej\xF3 realmente el incendio reportado en
+      Itag\xFC\xED?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo se investigan los incendios que podr\xEDan ser provocados?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1ntas personas murieron en el supuesto incendio masivo de Itag\xFC\xED?"
     tipo: 0

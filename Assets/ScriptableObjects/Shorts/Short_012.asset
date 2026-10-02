@@ -21,9 +21,10 @@ MonoBehaviour:
   falsedad: 2
   tematica: "Emergencia qu\xEDmica en cl\xEDnica"
   searchOptions:
-  - texto: 
+  - texto: "\xBFLas autoridades confirmaron una fuga de gases t\xF3xicos en la cl\xEDnica?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFPor qu\xE9 se evac\xFAa una cl\xEDnica durante una emergencia qu\xEDmica?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1ntas personas podr\xEDan morir por los gases t\xF3xicos de
+      la cl\xEDnica?"
     tipo: 0

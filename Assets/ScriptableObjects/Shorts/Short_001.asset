@@ -20,9 +20,12 @@ MonoBehaviour:
   falsedad: 1
   tematica: "Cierre de colegios en Medell\xEDn"
   searchOptions:
-  - texto: "Buscar informaci\xF3n no oficial\n"
+  - texto: "\xBFCu\xE1ntos colegios m\xE1s van a cerrar en Medell\xEDn por falta
+      de ni\xF1os?"
     tipo: 0
-  - texto: Buscar otras fuentes
+  - texto: "\xBFC\xF3mo ha cambiado la cantidad de estudiantes en los colegios de
+      Medell\xEDn?"
     tipo: 1
-  - texto: Buscar una fuente positiva
+  - texto: "\xBFEs cierto que est\xE1n cerrando colegios en Medell\xEDn por falta
+      de estudiantes?"
     tipo: 2

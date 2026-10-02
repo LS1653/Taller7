@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 1
   tematica: Globo de mecha en el aeropuerto
   searchOptions:
-  - texto: 
+  - texto: "\xBFHubo realmente una interrupci\xF3n de vuelos por un globo en el aeropuerto
+      Olaya Herrera?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFQu\xE9 riesgos representan los objetos extra\xF1os para un aeropuerto?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFQu\xE9 otros accidentes puede provocar un globo dentro de un aeropuerto?"
     tipo: 0

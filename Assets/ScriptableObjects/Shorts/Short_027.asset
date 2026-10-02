@@ -20,9 +20,9 @@ MonoBehaviour:
   falsedad: 2
   tematica: Tiendas de barrio
   searchOptions:
-  - texto: 
+  - texto: "\xBFCu\xE1ntas tiendas de barrio han cerrado realmente en Colombia?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFQu\xE9 factores est\xE1n afectando a las tiendas de barrio?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1ntas tiendas van a desaparecer por culpa de las grandes cadenas?"
     tipo: 0

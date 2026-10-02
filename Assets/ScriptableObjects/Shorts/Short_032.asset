@@ -20,9 +20,10 @@ MonoBehaviour:
   falsedad: 3
   tematica: Falsas ofertas de empleo y secuestro
   searchOptions:
-  - texto: 
+  - texto: "\xBFQu\xE9 recomiendan las autoridades para verificar una oferta de empleo
+      sospechosa?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo funcionan las estafas con falsas ofertas laborales?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFQu\xE9 ofertas falsas de empleo terminan en secuestro?"
     tipo: 0

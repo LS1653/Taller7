@@ -21,9 +21,10 @@ MonoBehaviour:
   falsedad: 3
   tematica: "Vegetaci\xF3n y sequ\xEDa bajo el Metro de Medell\xEDn"
   searchOptions:
-  - texto: 
+  - texto: "\xBFLos datos ambientales indican que Medell\xEDn est\xE1 sufriendo una
+      sequ\xEDa extrema?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFQu\xE9 factores pueden provocar sequ\xEDas en una ciudad?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFCu\xE1nto falta para que Medell\xEDn se quede completamente sin vegetaci\xF3n?"
     tipo: 0

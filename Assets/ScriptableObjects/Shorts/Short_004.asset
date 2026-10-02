@@ -20,9 +20,9 @@ MonoBehaviour:
   falsedad: 1
   tematica: "Desempleo en Medell\xEDn"
   searchOptions:
-  - texto: 
+  - texto: "\xBFCu\xE1l es la tasa oficial de desempleo actual en Medell\xEDn?"
     tipo: 2
-  - texto: 
+  - texto: "\xBFC\xF3mo se mide el desempleo en Medell\xEDn?"
     tipo: 1
-  - texto: 
+  - texto: "\xBFPor qu\xE9 cada vez hay menos trabajo en Medell\xEDn?"
     tipo: 0
