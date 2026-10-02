@@ -882,7 +882,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54
+  m_fontSize: 54.05
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1796,9 +1796,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shorts:
-  - {fileID: 11400000, guid: 622b9c7d45aa9c04e8ebd440148761ae, type: 2}
-  - {fileID: 11400000, guid: 9577fe7d422da5d4cbe050fdea3ca818, type: 2}
-  - {fileID: 11400000, guid: ad07610290692204f8590f6558d0cf8b, type: 2}
   - {fileID: 11400000, guid: e5e009de059727346a0768a2c777e839, type: 2}
   - {fileID: 11400000, guid: f2f91d70ba6a5c141ba6b1acd5560e52, type: 2}
   - {fileID: 11400000, guid: aabda7866ba61044eb9f0bf09d5bd79d, type: 2}
@@ -1810,12 +1807,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4316dda914225c441ab30e3f3709450b, type: 2}
   - {fileID: 11400000, guid: a9f5b851b7fe76e4aa6358840ffcae7b, type: 2}
   - {fileID: 11400000, guid: 39c08ae1ebc69ef43af43a1eb7e8d282, type: 2}
-  - {fileID: 11400000, guid: debf5e67f877f4f449375a030776bdf7, type: 2}
-  - {fileID: 11400000, guid: 6c17850308194ec47821dcf9bbb082c5, type: 2}
   - {fileID: 11400000, guid: 9abaeb8b558de74408f8e0fd36207344, type: 2}
   - {fileID: 11400000, guid: 7ccac70495c433641875993f45deefd3, type: 2}
   - {fileID: 11400000, guid: 013414afe349bcc45bca1dffd11d19e9, type: 2}
   - {fileID: 11400000, guid: 626dc65c361030c46a9e838b8d9bb6f3, type: 2}
+  - {fileID: 11400000, guid: 8277900b26f82484186fa6fc5e0aeeb8, type: 2}
+  - {fileID: 11400000, guid: 238e0a51a26173343a7f6c3b7fa1ffc8, type: 2}
+  - {fileID: 11400000, guid: 7fd89d7fc3d54f848a82503e49478352, type: 2}
+  - {fileID: 11400000, guid: 60e5ba92e7d5a4a49a4e57ecf48c6691, type: 2}
+  - {fileID: 11400000, guid: 4eb108689e9a26744ab93b3b4e8bbf90, type: 2}
+  - {fileID: 11400000, guid: a7f9e0db99980d9489279dbc2daf916b, type: 2}
+  - {fileID: 11400000, guid: dd1ceeedb70d2ff429163039d607f0a6, type: 2}
 --- !u!1 &578627115
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,7 +2313,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54.05
+  m_fontSize: 54.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2940,7 +2942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 1, b: 0.79842067, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3177,7 +3179,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
-  m_AspectRatio: 3
+  m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
@@ -3270,7 +3272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9798719, b: 0.4509434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3904,7 +3906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.75686276}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5066,7 +5068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.22352941}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

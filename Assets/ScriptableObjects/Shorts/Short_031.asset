@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Short_031
   m_EditorClassIdentifier: 
   id: short_031
-  video: {fileID: 0}
+  video: {fileID: 32900000, guid: 23c44cd26dbdaf046996cdbf2b8d7214, type: 3}
   titulo: "\xA1Adi\xF3s a los carros de gasolina! Medell\xEDn apuesta por los veh\xEDculos
     el\xE9ctricos"
   fuente: 

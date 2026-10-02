@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Short_032
   m_EditorClassIdentifier: 
   id: short_031
-  video: {fileID: 0}
+  video: {fileID: 32900000, guid: 5f92b74dbc4efa640befbb052cb47474, type: 3}
   titulo: "Buscar empleo podr\xEDa costarte la vida"
   fuente: 
   sensacionalismo: 3

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Short_033
   m_EditorClassIdentifier: 
   id: short_031
-  video: {fileID: 0}
+  video: {fileID: 32900000, guid: 3fc3cb24466ca4b4589cc56c71d6e886, type: 3}
   titulo: Muchas ofertas en linea terminan en secuestro
   fuente: 
   sensacionalismo: 2
