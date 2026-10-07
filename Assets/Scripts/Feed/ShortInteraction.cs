@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ShortInteraction : MonoBehaviour
 {
@@ -21,6 +22,13 @@ public class ShortInteraction : MonoBehaviour
     private DoomingManager doomingManager;
     private IdleManager idleManager;
     private GameManager gameManager;
+
+    [Header("Feedback Visual")]
+    [SerializeField] private UnityEngine.UI.Image imagenFeedbackPositivo;
+    [SerializeField] private UnityEngine.UI.Image imagenFeedbackNegativo;
+    [SerializeField] private float duracionFlash = 0.5f;
+
+    private Coroutine flashCoroutine;    
 
     [SerializeField] private GameObject reportConfirmation;
 
@@ -166,6 +174,10 @@ public class ShortInteraction : MonoBehaviour
             cambioF
         );
 
+        // Si la suma de los cambios es menor o igual a 0, fue una buena decisión.
+        bool fueBuenaDecision = (cambioReal.x + cambioReal.y) <= 0;
+        MostrarFlash(fueBuenaDecision);
+
         likeCambioSAplicado = cambioReal.x;
         likeCambioFAplicado = cambioReal.y;
 
@@ -238,8 +250,19 @@ public class ShortInteraction : MonoBehaviour
         }
     
         int cambioS = ObtenerCambioReport(reporteCorrecto);
-    
         doomingManager.ModificarSensacionalismo(cambioS);
+
+        // --- NUEVA LÓGICA DE FEEDBACK VISUAL ---
+        if (cambioS > 0)
+        {
+            MostrarFlash(false); // Aumenta el Dooming = Mala decisión (Rojo/Negativo)
+        }
+        else if (cambioS < 0)
+        {
+            MostrarFlash(true);  // Reduce el Dooming = Buena decisión (Verde/Positivo)
+        }
+        // Si cambioS es exactamente 0 (caso 2), simplemente no llamamos a MostrarFlash()
+        // ---------------------------------------
     
         Debug.Log(
             $"Report confirmado → S: {cambioS}"
@@ -302,6 +325,15 @@ public class ShortInteraction : MonoBehaviour
         float cambioF = opcion.ObtenerEfectoFalsedad();
 
         doomingManager.ModificarFalsedad(cambioF);
+
+        if (opcion.tipo == SearchOption.SearchType.Positiva)
+        {
+            MostrarFlash(true);
+        }
+        else if (opcion.tipo == SearchOption.SearchType.Negativa)
+        {
+            MostrarFlash(false);
+        }
 
         Debug.Log(
             $"Búsqueda → {opcion.tipo}, F: {cambioF}"
@@ -378,9 +410,9 @@ public class ShortInteraction : MonoBehaviour
 
         switch (shortData.sensacionalismo)
         {
-            case 1: return 0;
-            case 2: return -8;
-            case 3: return -12;
+            case 1: return 6;
+            case 2: return 0;
+            case 3: return -6;
             default: return 0;
         }
     }
@@ -415,5 +447,44 @@ public class ShortInteraction : MonoBehaviour
                 $"(tiempo: {tiempoTranscurrido:F2}s)"
             );
         }
+    }
+
+    private void MostrarFlash(bool decisionPositiva)
+    {
+        // Nos aseguramos de apagar ambas antes de empezar
+        if (imagenFeedbackPositivo != null) imagenFeedbackPositivo.gameObject.SetActive(false);
+        if (imagenFeedbackNegativo != null) imagenFeedbackNegativo.gameObject.SetActive(false);
+
+        // Elegimos qué imagen usar
+        UnityEngine.UI.Image imagenActiva = decisionPositiva ? imagenFeedbackPositivo : imagenFeedbackNegativo;
+        
+        if (imagenActiva == null) return;
+        
+        if (flashCoroutine != null)
+        {
+            StopCoroutine(flashCoroutine);
+        }
+        flashCoroutine = StartCoroutine(RutinaFlash(imagenActiva));
+    }
+
+    private System.Collections.IEnumerator RutinaFlash(UnityEngine.UI.Image imagen)
+    {
+        imagen.gameObject.SetActive(true);
+        
+        // Tomamos el color actual (por si la imagen ya tiene un tinte desde el inspector)
+        Color colorInicio = new Color(imagen.color.r, imagen.color.g, imagen.color.b, 1f);
+        Color colorTransparente = new Color(imagen.color.r, imagen.color.g, imagen.color.b, 0f);
+        
+        imagen.color = colorInicio;
+        float tiempo = 0f;
+        
+        while (tiempo < duracionFlash)
+        {
+            tiempo += Time.deltaTime;
+            imagen.color = Color.Lerp(colorInicio, colorTransparente, tiempo / duracionFlash);
+            yield return null; // Esperamos al siguiente frame
+        }
+        
+        imagen.gameObject.SetActive(false);
     }
 }
