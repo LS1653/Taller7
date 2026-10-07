@@ -3369,6 +3369,7 @@ MonoBehaviour:
   tematicaText: {fileID: 267337168}
   tituloText: {fileID: 1334322483}
   fuenteText: {fileID: 244961889}
+  videoRenderTexture: {fileID: 8400000, guid: 75556c9735ca24b4f988a26372f52e29, type: 2}
 --- !u!1 &1002058918
 GameObject:
   m_ObjectHideFlags: 0

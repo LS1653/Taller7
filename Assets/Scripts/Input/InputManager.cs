@@ -3,6 +3,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     public System.Action SwipeUp;
+    public System.Action<float> OnDrag; // NUEVO: Avisa cuánto se ha movido el dedo en Y
 
     [SerializeField] private float minimumSwipeDistance = 100f;
 
@@ -35,6 +36,13 @@ public class InputManager : MonoBehaviour
             isSwiping = true;
         }
 
+        // NUEVO: Detectar el movimiento mientras se mantiene presionado
+        if (Input.GetMouseButton(0) && isSwiping)
+        {
+            float deltaY = Input.mousePosition.y - startPosition.y;
+            OnDrag?.Invoke(deltaY);
+        }
+
         if (Input.GetMouseButtonUp(0) && isSwiping)
         {
             Vector2 endPosition = Input.mousePosition;
@@ -42,6 +50,9 @@ public class InputManager : MonoBehaviour
             CheckSwipe(endPosition - startPosition);
 
             isSwiping = false;
+
+            // NUEVO: Avisamos que el arrastre terminó enviando un 0
+            OnDrag?.Invoke(0f);
         }
     }
 
@@ -58,6 +69,13 @@ public class InputManager : MonoBehaviour
             isSwiping = true;
         }
 
+        // NUEVO: Detectar el movimiento del dedo en la pantalla
+        if (touch.phase == TouchPhase.Moved && isSwiping)
+        {
+            float deltaY = touch.position.y - startPosition.y;
+            OnDrag?.Invoke(deltaY);
+        }
+
         if (touch.phase == TouchPhase.Ended && isSwiping)
         {
             Vector2 endPosition = touch.position;
@@ -65,6 +83,9 @@ public class InputManager : MonoBehaviour
             CheckSwipe(endPosition - startPosition);
 
             isSwiping = false;
+
+            // NUEVO: Avisamos que el arrastre terminó
+            OnDrag?.Invoke(0f);
         }
     }
 

@@ -19,6 +19,9 @@ public class ShortView : MonoBehaviour
     [SerializeField] private TMP_Text tituloText;
     [SerializeField] private TMP_Text fuenteText;
 
+    [Header("Renderizado")]
+    [SerializeField] private RenderTexture videoRenderTexture;
+
     private void Awake()
     {
         videoPlayer = GetComponent<VideoPlayer>();
@@ -61,15 +64,32 @@ public class ShortView : MonoBehaviour
 
         videoPlayer.Stop();
 
+        // 1. Limpiamos la memoria del video anterior para que quede en negro
+        if (videoRenderTexture != null)
+        {
+            videoRenderTexture.Release();
+        }
+
         videoPlayer.clip = shortData.video;
         videoPlayer.isLooping = true;
-        videoPlayer.Play();
+
+        // 2. En lugar de darle a Play de inmediato, preparamos el video
+        videoPlayer.prepareCompleted += OnVideoPrepared;
+        videoPlayer.Prepare();
 
         ConfigurarBusqueda(shortData);
 
         Debug.Log(
             $"Reproduciendo video de: {shortData.name}"
         );
+    }
+
+    private void OnVideoPrepared(VideoPlayer vp)
+    {
+        // Muy importante desuscribirse para no acumular llamadas en futuros swipes
+        vp.prepareCompleted -= OnVideoPrepared;
+        
+        vp.Play();
     }
 
     public void AbrirBusqueda()
