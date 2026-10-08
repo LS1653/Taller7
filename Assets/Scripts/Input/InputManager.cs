@@ -122,9 +122,6 @@ public class InputManager : MonoBehaviour
             gameManager.IniciarJuego();
         }
     
-        if (feedManager != null)
-        {
-            feedManager.Next();
-        }
+        
     }
 }
